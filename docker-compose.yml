@@ -6,11 +6,9 @@ services:
     container_name: artist-catalog
     ports:
       - "8080:8080"
-    network_mode: host
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
-    network_mode: host
     container_name: elasticsearch
     environment:
       - "discovery.type=single-node"

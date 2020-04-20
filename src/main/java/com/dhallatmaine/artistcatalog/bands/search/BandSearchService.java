@@ -19,12 +19,8 @@ public class BandSearchService {
     private ElasticsearchService elasticsearchService;
 
     public List<Band> search(String band) {
-        BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
-        boolQueryBuilder.filter(QueryBuilders.termQuery(QueryFields.Bands.NAME, band));
-
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-        searchSourceBuilder.query(boolQueryBuilder);
-
+        searchSourceBuilder.query(QueryBuilders.matchPhraseQuery(QueryFields.Bands.NAME_TEXT, band));
         return elasticsearchService.search(Indexes.BANDS_INDEX, searchSourceBuilder, Band.class);
     }
 

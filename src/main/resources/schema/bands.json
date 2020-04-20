@@ -1,7 +1,12 @@
 {
   "properties": {
     "name": {
-      "type": "keyword"
+      "type": "keyword",
+      "fields": {
+        "raw": {
+          "type":  "text"
+        }
+      }
     }
   }
 }
