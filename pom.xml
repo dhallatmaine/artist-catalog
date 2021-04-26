@@ -19,7 +19,7 @@
 		<jsoup.version>1.13.1</jsoup.version>
 		<junit.version>4.13</junit.version>
 		<elasticsearch.version>7.6.2</elasticsearch.version>
-		<commons-io.version>2.6</commons-io.version>
+		<commons-io.version>2.7</commons-io.version>
 		<lombok.version>1.18.12</lombok.version>
 		<guava.version>19.0</guava.version>
 	</properties>
